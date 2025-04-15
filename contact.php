@@ -1,10 +1,15 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+// Utilise correctement le namespace même si le dossier s'appelle différemment
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
-require 'PHPMailer/Exception.php';
+// Corrige les chemins en fonction du nom exact du dossier sur ton hébergement
+require __DIR__ . '/PHPmailer/PHPMailer.php';
+require __DIR__ . '/PHPmailer/SMTP.php';
+require __DIR__ . '/PHPmailer/Exception.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupération et sécurisation des données
