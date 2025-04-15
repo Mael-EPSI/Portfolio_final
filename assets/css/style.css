@@ -708,7 +708,7 @@ p {
 }
 
 .expertise-card .expertise-item .text .title {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 500;
 	color: var(--black);
 	line-height: 1.5em;
